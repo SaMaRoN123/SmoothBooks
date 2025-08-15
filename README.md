@@ -14,12 +14,6 @@ A production-ready accounting software with invoicing, expense tracking, payroll
 - **Mobile & Cloud Access**: Responsive web application
 - **User-Friendly Dashboards**: Modern Material-UI interface
 
-### 🔄 In Progress
-- Advanced invoice templates
-- PDF generation
-- Email notifications
-- Advanced reporting features
-
 ## Tech Stack
 
 ### Backend
@@ -356,18 +350,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Issues**: [GitHub Issues](https://github.com/samaron123/SmoothBooks/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/samaron123/SmoothBooks/discussions)
 - **Documentation**: [README.md](README.md) and [DEPLOYMENT.md](DEPLOYMENT.md)
-
-## Roadmap
-
-### Upcoming Features
-- [ ] Advanced invoice templates
-- [ ] PDF generation
-- [ ] Email notifications
-- [ ] Advanced reporting features
-- [ ] Mobile app
-- [ ] Multi-tenant support
-- [ ] API rate limiting
-- [ ] Real-time notifications
 
 ### Recent Updates
 - ✅ Complete accounting system
