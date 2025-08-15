@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: smoothbooks-backend
+    restart: unless-stopped
+    environment:
+      - FLASK_ENV=production
+      - DATABASE_URL=sqlite:///smoothbooks.db
+      - SECRET_KEY=${SECRET_KEY:-your-super-secret-key-change-in-production}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-your-jwt-secret-key-change-in-production}
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend/instance:/app/instance
+    networks:
+      - smoothbooks-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: smoothbooks-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - smoothbooks-network
+
+  # Optional: PostgreSQL database for production
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: smoothbooks-postgres
+  #   restart: unless-stopped
+  #   environment:
+  #     - POSTGRES_DB=smoothbooks
+  #     - POSTGRES_USER=smoothbooks
+  #     - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-smoothbooks123}
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+  #   networks:
+  #     - smoothbooks-network
+
+networks:
+  smoothbooks-network:
+    driver: bridge
+
+# volumes:
+#   postgres_data:
