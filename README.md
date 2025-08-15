@@ -61,9 +61,6 @@ SmoothBooks/
 │       ├── pages/          # Page components
 │       ├── contexts/       # React contexts
 │       └── App.js          # Main application
-├── .github/                # GitHub configuration
-│   └── workflows/          # CI/CD workflows
-│       └── ci.yml          # GitHub Actions pipeline
 ├── .gitignore              # Git ignore rules
 ├── .dockerignore           # Docker ignore rules
 ├── CONTRIBUTING.md         # Contributing guidelines
@@ -322,13 +319,6 @@ npm test
 - Add tests for new features
 - Update documentation
 
-### CI/CD Pipeline
-The project includes GitHub Actions workflows for:
-- Automated testing
-- Code quality checks
-- Security scanning
-- Dependency updates
-
 ## Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
@@ -360,7 +350,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - ✅ Financial reporting
 - ✅ Modern React UI
 - ✅ Docker support
-- ✅ CI/CD pipeline
 
 ---
 
