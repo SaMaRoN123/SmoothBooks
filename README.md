@@ -71,7 +71,6 @@ SmoothBooks/
 ├── README.md               # This file
 ├── setup.py                # Automated setup script
 ├── start.bat               # Windows start script
-└── start.sh                # Unix/Linux/macOS start script
 ```
 
 ## Quick Start
